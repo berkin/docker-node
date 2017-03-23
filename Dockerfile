@@ -1,4 +1,9 @@
-FROM node:boron
+FROM node:7
+
+
+RUN cd /tmp \
+	&& apt-get update \
+	&& apt-get install -y wkhtmltopdf
 
 # Create app directory
 RUN mkdir -p /usr/src/app
