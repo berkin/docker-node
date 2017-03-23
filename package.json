@@ -5,7 +5,8 @@
   "author": "kuyabiye",
   "main": "server.js",
   "scripts": {
-    "start": "node server.js"
+    "start": "node server.js && print",
+	"print": "wkhtmltopdf  --print-media-type  --dpi 300 -L 0 -R 0 -T 0 -B 0  http://localhost:8080 hello.pdf"
   },
   "dependencies": {
     "express": "^4.13.3"
